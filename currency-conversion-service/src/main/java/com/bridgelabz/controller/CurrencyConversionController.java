@@ -41,6 +41,14 @@ public class CurrencyConversionController {
 		return new CurrencyConversionBean(response.getId(), response.getFrom(), response.getTo(),response.getConversionMultiple(), quantity,quantity.multiply(response.getConversionMultiple()), response.getPort());
 	}
 	
+	
+	/**
+	 * Calling CurrencyExchangeServiceProxy proxy to invoke CurrencyExchangeService using Feign
+	 * @param from
+	 * @param to
+	 * @param quantity
+	 * @return
+	 */
 	@GetMapping("/currency-converter-feign/from/{from}/to/{to}/quantity/{quantity}")
 	public CurrencyConversionBean convertCurrencyFeign(@PathVariable String from,
 												  @PathVariable String to,
