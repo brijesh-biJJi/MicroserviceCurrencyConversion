@@ -17,7 +17,7 @@ public class ZuulLoggingFilter extends ZuulFilter{
 	
 	@Override
 	public boolean shouldFilter() {
-		return true;
+		return false;
 	}
 
 	@Override
@@ -29,12 +29,12 @@ public class ZuulLoggingFilter extends ZuulFilter{
 
 	@Override
 	public String filterType() {
-		return "pre";
+		return "";
 	}
 
 	@Override
 	public int filterOrder() {
-		return 1;
+		return 0;
 	}
 	
 
